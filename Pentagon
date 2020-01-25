@@ -1,0 +1,26 @@
+//Header file section
+import java.util.*;
+//main class
+public class AreaOfPentagonDemo
+{
+//main method
+public static void main(String[] args)
+{
+  //Declare variables
+  double lengthVal, sideVal, areaVal;
+  
+  //Create a Scanner class's object
+  Scanner scn = new Scanner(System.in);
+  
+  //Prompt and read input from the user
+  System.out.print("Enter the length from the center to a vertex:");
+  lengthVal = scn.nextDouble();
+  //Calculate length of the side value
+  sideVal = 2 * lengthVal * Math.sin(Math.toRadians(36));
+  //Calculate the area of pentagon value
+  areaVal = (5 * Math.pow(sideVal, 2)) / (4 * Math.tan(Math.toRadians(36)));
+  
+  //Display result as round up two digits after the decimal point
+  System.out.printf("The area of the pentagon is %4.2f", areaVal);
+  }
+}
